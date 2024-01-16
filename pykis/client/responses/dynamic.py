@@ -59,7 +59,13 @@ class KisDynamic:
                 elif type == date:
                     return datetime.strptime(value, '%Y%m%d').date()
                 elif type == time:
-                    return datetime.strptime(value, '%H%M%S').time()
+                    try:
+                        return datetime.strptime(value, '%H%M%S').time()
+                    except ValueError:
+                        # 빈 문자열이 들어온 경우 또는 형식이 잘못된 경우 처리
+                        # 여기서는 예시로 None을 반환하도록 하겠습니다.
+                        # 실제 사용 시에는 필요에 따라 다른 처리를 할 수 있습니다.
+                        return None
                 elif type.__name__ == 'list' and len(get_args(type)) == 1:
                     item_type = get_args(type)[0]
                     return [self._convert(item_type, i, k) for i in value]

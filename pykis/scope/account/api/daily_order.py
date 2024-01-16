@@ -21,7 +21,7 @@ def daily_order(
     end_date: datetime,
     order: KisStockOrderBase | None = None,
     code: str = '',
-    dvsn: BUY_CELL_DVSN_TYPE = '전체',
+    dvsn: BUY_CELL_DVSN_TYPE2 = '전체',
     dvsn_1: INQR_DVSN_1_CODES_TYPE = '전체',
     dvsn_3: INQR_DVSN_3_CODES_TYPE = '전체',
     ccld: CCLD_TYPE = '전체',
@@ -36,7 +36,7 @@ def daily_order(
         end_date (datetime): 종료일
         order (KisStockOrderBase, optional): 주문. Defaults to None.
         code (str, optional): 종목코드. Defaults to ''.
-        dvsn (BUY_CELL_DVSN_TYPE, optional): 매수매도구분. Defaults to '전체'.
+        dvsn (BUY_CELL_DVSN_TYPE2, optional): 매수매도구분. Defaults to '전체'.
         dvsn_1 (INQR_DVSN_1_CODES_TYPE, optional): 조회구분1. Defaults to '전체'.
         dvsn_3 (INQR_DVSN_3_CODES_TYPE, optional): 조회구분3. Defaults to '전체'.
         ccld (CCLD_TYPE, optional): 체결구분. Defaults to '전체'.
@@ -48,7 +48,7 @@ def daily_order(
         raise ValueError('종목코드는 6자리입니다.')
     
     if len(dvsn) != 1:
-        dvsn = BUY_CELL_DVSN[dvsn]  # type: ignore
+        dvsn = BUY_CELL_DVSN2[dvsn]  # type: ignore
 
     if ccld in CCLD_CODES:
         ccld = CCLD_CODES[ccld]  # type: ignore
@@ -86,7 +86,7 @@ def daily_orders(
     end_date: datetime,
     order: KisStockOrderBase | None = None,
     code: str = '',
-    dvsn: BUY_CELL_DVSN_TYPE = '전체',
+    dvsn: BUY_CELL_DVSN_TYPE2 = '전체',
     dvsn_1: INQR_DVSN_1_CODES_TYPE = '전체',
     dvsn_3: INQR_DVSN_3_CODES_TYPE = '전체',
     ccld: CCLD_TYPE = '전체',
@@ -101,7 +101,7 @@ def daily_orders(
         end_date (datetime): 종료일
         order (KisStockOrderBase, optional): 주문. Defaults to None.
         code (str, optional): 종목코드. Defaults to ''.
-        dvsn (BUY_CELL_DVSN_TYPE, optional): 매수매도구분. Defaults to '전체'.
+        dvsn (BUY_CELL_DVSN_TYPE2, optional): 매수매도구분. Defaults to '전체'.
         dvsn_1 (INQR_DVSN_1_CODES_TYPE, optional): 조회구분1. Defaults to '전체'.
         dvsn_3 (INQR_DVSN_3_CODES_TYPE, optional): 조회구분3. Defaults to '전체'.
         ccld (CCLD_TYPE, optional): 체결구분. Defaults to '전체'.
@@ -133,7 +133,7 @@ def daily_order_all(
     end_date: datetime,
     order: KisStockOrderBase | None = None,
     code: str = '',
-    dvsn: BUY_CELL_DVSN_TYPE = '전체',
+    dvsn: BUY_CELL_DVSN_TYPE2 = '전체',
     dvsn_1: INQR_DVSN_1_CODES_TYPE = '전체',
     dvsn_3: INQR_DVSN_3_CODES_TYPE = '전체',
     ccld: CCLD_TYPE = '전체',
@@ -148,7 +148,7 @@ def daily_order_all(
         end_date (datetime): 종료일
         order (KisStockOrderBase, optional): 주문. Defaults to None.
         code (str, optional): 종목코드. Defaults to ''.
-        dvsn (BUY_CELL_DVSN_TYPE, optional): 매수매도구분. Defaults to '전체'.
+        dvsn (BUY_CELL_DVSN_TYPE2, optional): 매수매도구분. Defaults to '전체'.
         dvsn_1 (INQR_DVSN_1_CODES_TYPE, optional): 조회구분1. Defaults to '전체'.
         dvsn_3 (INQR_DVSN_3_CODES_TYPE, optional): 조회구분3. Defaults to '전체'.
         ccld (CCLD_TYPE, optional): 체결구분. Defaults to '전체'.

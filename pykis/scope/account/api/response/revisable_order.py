@@ -19,10 +19,17 @@ BUY_CELL_DVSN = {
     '매도': '1',
     '매수': '2'
 }
-
+BUY_CELL_DVSN2 = {
+    # 0 : 전체
+    # 1 : 매도
+    # 2 : 매수
+    '전체': '00',
+    '매도': '01',
+    '매수': '02'
+}
 INQR_ORDER_BY_TYPE = Literal['기본', '주문순', '종목순', '0', '1', '2']
 BUY_CELL_DVSN_TYPE = Literal['전체', '매도', '매수', '0', '1', '2']
-
+BUY_CELL_DVSN_TYPE2 = Literal['전체', '매도', '매수', '00', '01', '02']
 # -ORD_GNO_BRNO	주문채번지점번호	String	Y	5	주문시 한국투자증권 시스템에서 지정된 영업점코드
 # -ODNO	주문번호	String	Y	10	주문시 한국투자증권 시스템에서 채번된 주문번호
 # -ORGN_ODNO	원주문번호	String	Y	10	정정/취소주문 인경우 원주문번호
